@@ -1,0 +1,3 @@
+#!/bin/bash
+WORKDIR=$(pwd)
+echo "27 13 * * * root cd $WORKDIR; ./backup.sh" > /etc/cron.d/backup_to_git
