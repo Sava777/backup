@@ -8,7 +8,7 @@ fi
 
 while read srcdir dstdir
 do
-    if [ "$src" == "#" ]; then
+    if [[ "$src" == "#" ]]; then
         continue 2
     fi
 
