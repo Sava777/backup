@@ -1,6 +1,6 @@
 #!/bin/bash
 BACKUPDIR=backup
-NOW=$(date +%Y-%m-%d %H:%M:%S)
+NOW=$(date +%Y-%m-%d_%H:%M:%S)
 
 if [ ! -d "$BACKUPDIR" ]; then
   /bin/mkdir $BACKUPDIR
@@ -21,4 +21,4 @@ done < backup.conf
 
 /usr/bin/git add .
 /usr/bin/git commit -v -m "Backup $NOW"
-/usr/bin/git origin master
+/usr/bin/git push origin master
